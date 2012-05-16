@@ -8,7 +8,7 @@ def postgres_installed?
   `which pg_config`.length > 0
 end
 
-class Php54 < Formula
+class Php < Formula
   homepage 'http://php.net'
   url 'http://www.php.net/get/php-5.4.3.tar.bz2/from/this/mirror'
   md5 '51f9488bf8682399b802c48656315cac'
@@ -160,7 +160,7 @@ class Php54 < Formula
       args << "--with-iodbc"
     end
 
-    system "./buildconf" if ARGV.build_head?
+    system "./buildconf" if ARGV.build_head? or ARGV.build_devel?
     system "./configure", *args
 
     unless ARGV.include? '--without-apache'
