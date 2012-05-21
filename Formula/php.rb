@@ -15,7 +15,6 @@ class Php < Formula
   version '5.4.3'
 
   head 'https://svn.php.net/repository/php/php-src/branches/PHP_5_4', :using => :svn
-  devel 'https://svn.php.net/repository/php/php-src/trunk', :using => :svn
 
   skip_clean ['bin', 'sbin']
 
@@ -26,7 +25,6 @@ class Php < Formula
   depends_on 'imap-uw' if ARGV.include? '--with-imap'
   depends_on 'jpeg'
   depends_on 'libevent' if ARGV.include? '--with-fpm'
-  depends_on 'libxml2'
   depends_on 'mcrypt'
   depends_on 'unixodbc' if ARGV.include? '--with-unixodbc'
 
@@ -93,7 +91,7 @@ class Php < Formula
       "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
       "--with-kerberos=/usr",
-      "--with-libxml-dir=#{Formula.factory('libxml2').prefix}",
+      "--with-libxml-dir=/usr",
       "--with-xsl=/usr",
       "--with-curl=/usr",
       "--with-gd",
@@ -160,7 +158,7 @@ class Php < Formula
       args << "--with-iodbc"
     end
 
-    system "./buildconf" if ARGV.build_head? or ARGV.build_devel?
+    system "./buildconf" if ARGV.build_head?
     system "./configure", *args
 
     unless ARGV.include? '--without-apache'
