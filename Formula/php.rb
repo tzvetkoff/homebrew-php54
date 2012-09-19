@@ -10,9 +10,9 @@ end
 
 class Php < Formula
   homepage 'http://php.net'
-  url 'http://www.php.net/get/php-5.4.6.tar.bz2/from/this/mirror'
-  md5 'c9aa0f4996d1b91ee9e45afcfaeb5d2e'
-  version '5.4.6'
+  url 'http://www.php.net/get/php-5.4.7.tar.bz2/from/this/mirror'
+  md5 '9cd421f1cc8fa8e7f215e44a1b06199f'
+  version '5.4.7'
 
   head 'https://svn.php.net/repository/php/php-src/branches/PHP_5_4', :using => :svn
 
@@ -20,6 +20,8 @@ class Php < Formula
 
   depends_on 'freetds' if ARGV.include? '--with-mssql'
   depends_on 'gettext'
+  depends_on 'freetype'
+  depends_on 'libpng'
   depends_on 'gmp' if ARGV.include? '--with-gmp'
   depends_on 'icu4c' if ARGV.include? '--with-intl'
   depends_on 'imap-uw' if ARGV.include? '--with-imap'
