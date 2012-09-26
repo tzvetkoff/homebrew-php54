@@ -1,3 +1,5 @@
+require 'formula'
+
 class Phpsh < Formula
   homepage 'http://www.phpsh.org/'
   url 'https://github.com/facebook/phpsh.git'
