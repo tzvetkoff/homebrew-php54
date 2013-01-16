@@ -65,7 +65,7 @@ class Php < Formula
       "--prefix=#{prefix}",
       "--disable-debug",
       "--with-config-file-path=#{etc}",
-      "--with-config-file-scan-dir=#{etc}/php5/conf.d",
+      "--with-config-file-scan-dir=#{etc}/php.ini.d",
       "--with-iconv-dir=/usr",
       "--enable-dba",
       "--with-ndbm=/usr",
@@ -130,7 +130,7 @@ class Php < Formula
     end
 
     if ARGV.include? '--with-gmp'
-      args << "--with-gmp" 
+      args << "--with-gmp"
     end
 
     if ARGV.include? '--with-imap'
