@@ -11,7 +11,7 @@ end
 class Php < Formula
   homepage 'http://php.net'
   url 'http://php.net/get/php-5.4.11.tar.bz2/from/this/mirror'
-  md5 '9975e68c22b86b013b934743ad2d2276'
+  sha256 'd4d095a965f015896d25321842da586076aca5fed4c52939866548ebad5b0fdb'
   version '5.4.11'
 
   head 'https://svn.php.net/repository/php/php-src/branches/PHP_5_4', :using => :svn
