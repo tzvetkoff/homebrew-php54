@@ -10,9 +10,9 @@ end
 
 class Php < Formula
   homepage 'http://php.net'
-  url 'http://php.net/get/php-5.4.14.tar.bz2/from/this/mirror'
-  sha256 '5450f3843bc651eb3fb00601f0cce1930aaaf65c7c966c02fe4a46f9c81be20a'
-  version '5.4.14'
+  url 'http://php.net/get/php-5.4.15.tar.bz2/from/this/mirror'
+  sha256 '2d2285da48ccd2db311b2608fdfafd18b363a9f7e3796d53dd53e5b6752a0136'
+  version '5.4.15'
 
   head 'https://svn.php.net/repository/php/php-src/branches/PHP_5_4', :using => :svn
 
