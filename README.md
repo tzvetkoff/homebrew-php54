@@ -1,3 +1,8 @@
+# RETIRED
+
+This repo is no longer maintained.
+Consider using [homebrew/php](https://github.com/Homebrew/homebrew-php).
+
 # homebrew-php54
 
 PHP 5.4 formulae micro-repo
